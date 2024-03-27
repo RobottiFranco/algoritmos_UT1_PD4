@@ -1,0 +1,54 @@
+ejercicio 1
+
+public class IdentifyMyParts {
+public static int x = 7;
+public int y = 3;
+}
+
+A- la variable x es la varaible de clase
+B- la variable y es la variable de instancia
+
+IdentifyMyParts a = new IdentifyMyParts();
+IdentifyMyParts b = new IdentifyMyParts();
+a.y = 5;
+b.y = 6;
+a.x = 1;
+b.x = 2;
+System.out.println("a.y = " + a.y);
+System.out.println("b.y = " + b.y);
+System.out.println("a.x = " + a.x);
+System.out.println("b.x = " + b.x);
+System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
+
+salida:
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 2
+IdentifyMyParts.x = 2
+
+
+ejercicio 2
+
+El problema en este código es que estás intentando utilizar el objeto myRect
+de tipo Rectangle sin inicializarlo primero. Cuando declaras un objeto en Java,
+necesitas inicializarlo utilizando el operador new.
+
+ejercicio 3
+
+String[] students = new String[10];
+String studentName = "Peter Parker";
+students[0] = studentName;
+studentName = null;
+...
+
+1- Después de que se ejecuta habrá dos referencias a objetos:
+
+El arreglo students, que contiene una referencia al objeto String[] creado.
+El objeto String "Peter Parker", al que hace referencia el primer elemento del arreglo students.
+
+2-
+En Java, los objetos se destruyen automáticamente cuando ya no tienen ninguna referencia que los esté apuntando.
+Java tiene el garbage collector que se encarga de liberar la memoria ocupada por los objetos que ya no son accesibles.
+
+3- 
